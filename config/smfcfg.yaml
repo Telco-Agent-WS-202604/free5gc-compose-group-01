@@ -85,8 +85,8 @@ configuration:
               - internet
       UPF-V2X: # V2X slice dedicated UPF (separate EC2)
         type: UPF
-        nodeID: 0.0.0.0 # Placeholder — replaced after CFn deploy with actual Private IP
-        addr: 0.0.0.0 # Placeholder — replaced after CFn deploy with actual Private IP
+        nodeID: 172.31.33.216 # New UPF EC2 Private IP
+        addr: 172.31.33.216 # New UPF EC2 Private IP
         sNssaiUpfInfos:
           - sNssai:
               sst: 4
@@ -100,7 +100,7 @@ configuration:
         interfaces:
           - interfaceType: N3
             endpoints:
-              - 0.0.0.0 # Placeholder — replaced after CFn deploy with actual Private IP
+              - 172.31.33.216 # New UPF EC2 Private IP
             networkInstances:
               - v2x
     links: # the topology graph of userplane, A and B represent the two nodes of each link
